@@ -28,6 +28,11 @@ my_str = my_str.lower()
 print(my_str)
 #######################################################################
 #6
-
+my_str = "qwer"
+new_str = my_str if len(my_str) >= 5 else my_str * 2
+print(new_str)
 #######################################################################
 #7
+my_str = "qwer"
+new_str = my_str if len(my_str) >= 5 else my_str + my_str[::-1]
+print(new_str)
