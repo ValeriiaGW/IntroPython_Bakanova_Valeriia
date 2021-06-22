@@ -43,14 +43,14 @@
 
 
 
-# value = input("Введи целое число")      # some error
-# try:
-#     value = float(value)
-#     result = 1 / value
-# except (ValueError, ZeroDivisionError):
-#     print("???")
-#     result = 0
-# print(result)
+value = input("Введи целое число")      # some error
+try:
+    value = float(value)
+    result = 1 / value
+except (ValueError, ZeroDivisionError):
+    print("???")
+    result = 0
+print(result)
 
 # ИТЕРАЦИЯ
 
@@ -175,14 +175,14 @@
 # print("new_tuple", type(new_tuple), new_tuple)  # some error
 
 
-new_list = []
-
-some_value = new_list.append('first')
-new_list.append('second')
-new_list.append([1,3,5])
-last_value = new_list.pop()
-print(new_list)
-print(last_value, some_value)
+# new_list = []
+#
+# some_value = new_list.append('first')
+# new_list.append('second')
+# new_list.append([1,3,5])
+# last_value = new_list.pop()
+# print(new_list)
+# print(last_value, some_value)
 
 
 #
