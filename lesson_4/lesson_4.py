@@ -86,18 +86,18 @@
 
 
 # Цикл For
-
+#
 # test_str = "qwerty"
 #
 # for symbol in test_str:
 #     print(f"symbol: {symbol}")
-
-
+#
+#
 # test_str = "qwerty"
 #
 # for symbol in test_str[::-1]: # в обратном порядке
 #     print(f"symbol: {symbol}")
-
+#
 
 # только гласные буквы
 
@@ -175,30 +175,30 @@
 # print("new_tuple", type(new_tuple), new_tuple)  # some error
 
 
-# new_list = []
+new_list = []
+
+some_value = new_list.append('first')
+new_list.append('second')
+new_list.append([1,3,5])
+last_value = new_list.pop()
+print(new_list)
+print(last_value, some_value)
+
+
 #
-# some_value = new_list.append('first')
-# new_list.append('second')
-# new_list.append([1,3,5])
-# last_value = new_list.pop()
-# print(new_list)
-# print(last_value, some_value)
+# test_str = "qwertyamdlkmknadmDRYLoiuhbnm"
+# result = []
+# for symbol in test_str:
+#     if symbol.lower() not in "eyaoiu" and symbol.isalpha():
+#         # print(f"symbol: {symbol}")
+#         result.append(symbol)
+#     print(result)
 
-
-
-test_str = "qwertyamdlkmknadmDRYLoiuhbnm"
-result = []
-for symbol in test_str:
-    if symbol.lower() not in "eyaoiu" and symbol.isalpha():
-        # print(f"symbol: {symbol}")
-        result.append(symbol)
-    # print(result)
-
-join_str = "_".join(result)
-print(join_str)
-
-join_str = "".join(result)
-print(join_str)
-
-split_str = list(test_str)
-print(split_str)
+# join_str = "_".join(result)
+# print(join_str)
+#
+# join_str = "".join(result)
+# print(join_str)
+#
+# split_str = list(test_str)
+# print(split_str)
