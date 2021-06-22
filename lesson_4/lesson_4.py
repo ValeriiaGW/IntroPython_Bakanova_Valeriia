@@ -43,14 +43,14 @@
 
 
 
-value = input("Введи целое число")      # some error
-try:
-    value = float(value)
-    result = 1 / value
-except (ValueError, ZeroDivisionError):
-    print("???")
-    result = 0
-print(result)
+# value = input("Введи целое число")      # some error
+# try:
+#     value = float(value)
+#     result = 1 / value
+# except (ValueError, ZeroDivisionError):
+#     print("???")
+#     result = 0
+# print(result)
 
 # ИТЕРАЦИЯ
 
@@ -86,12 +86,12 @@ print(result)
 
 
 # Цикл For
-#
+# #
 # test_str = "qwerty"
 #
 # for symbol in test_str:
 #     print(f"symbol: {symbol}")
-#
+# #
 #
 # test_str = "qwerty"
 #

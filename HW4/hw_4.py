@@ -22,28 +22,16 @@
 #     my_list.append(0)
 # print(my_list)
 
-# 4) Пользователь вводит value - число с запятой (например 3.14) с клавиатуры.
-# Вы приводите это value к типу float и выводите результат выражения value ** -1.
-# Написать программу, которая вычисляет данное выражение и
-# корректно обрабатывает возможные исключения.
 
-# value = input("введи дробное число")
+
+# value = input("введи дробное число: ")
 # try:
 #     value = float(value)
+#     new_value = value ** -1
 # except (ValueError, ZeroDivisionError):
-#     print("Кажется кто-то хотел меня наебать")
+#     print("Введено не число или ноль")
 #     exit(1)
-# new_value = value ** -1
 # print(new_value)
-
-value = input("введи дробное число: ")
-try:
-    value = float(value)
-    new_value = value ** -1
-except (ValueError, ZeroDivisionError):
-    print("Введено не число или ноль")
-    exit(1)
-print(new_value)
 
 
 
@@ -51,11 +39,11 @@ print(new_value)
 #
 # #####################################################
 # Еще один пример - вложенные циклы (цикл в цикле).
-# my_string_1 = "12"
-# my_string_2 = "34"
-# for symb_1 in my_string_1:
-# 	for symb_2 in my_string_2:
-# 		print(symb_1 + symb_2)
+my_string_1 = "ab"
+my_string_2 = "cd"
+for symb_1 in my_string_1:
+	for symb_2 in my_string_2:
+		print(symb_1 + symb_2)
 #
 #
 #
@@ -70,3 +58,8 @@ print(new_value)
 # Сгенерировать целые числа (тип int) от 0 до 99 и ПОМЕСТИТЬ их в список.
 # Задание нужно выполнить ТОЛЬКО через цикл в цикле(См. пример выше) и приведение типов.
 # Генерирование через range или другие "фишки" я засчитывать не буду ))
+
+my_string = '0123456789'
+my_int = int(my_string)
+for i in my_int:
+	for
