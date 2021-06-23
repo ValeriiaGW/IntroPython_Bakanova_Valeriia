@@ -36,10 +36,11 @@
 
 ###########################################################
 
-my_string = '0123456789'
-for i1 in my_string:
-	for i2 in my_string:
-		new_list = int(i1 + i2)
-		print(new_list)
+# my_string = '0123456789'
+# for s1 in my_string:
+# 	for s2 in my_string:
+# 		new_list = int(s1 + s2)
+# 		print(new_list)
+
 
 
