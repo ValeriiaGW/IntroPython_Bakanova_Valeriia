@@ -81,14 +81,14 @@
 # # print(my_list)         # №1
 #
 # #
-# # my_str = "qwerty"
-# # my_list = []
-# #
-# # for index, symbol in enumerate(my_str):
-# # 	if not index % 2:
-# # 		my_list.append(symbol)
-# #
-# # print(my_list)			# №2
+# my_str = "qwerty"
+# my_list = []
+#
+# for index, symbol in enumerate(my_str):
+# 	if not index % 2:
+# 		my_list.append(symbol)
+#
+# print(my_list)			# №2
 #
 #
 # # дана строка и список цулых чисел в диапазоне от 0 до длины строки -1 и пустой список
@@ -156,3 +156,5 @@
 # my_number = 876543201234056765
 # new_number = int(''.join(sorted(str(my_number))))
 # print(new_number)
+
+
