@@ -77,31 +77,34 @@
 # print(sub_str)
 
 
-
-
 # 8. Дана строка my_str. Разделите эту строку на пары из двух символов и поместите эти пары в список.
 # Если строка содержит нечетное количество символов, пропущенный второй символ последней пары должен
 # быть заменен подчеркиванием ('_'). Примеры: 'abcd' -> ['ab', 'cd'], 'abcde' -> ['ab', 'cd', e_']
 # (используйте срезы длинны 2)
 #
-my_str = "qwertyhbvcqxqttzqr"
-new_list_1 = []
-
-if len(my_str) % 2 != 0:
-    my_str = my_str + "_"
-
-for i in range(1, len(my_str), 2):
-    # new_str = my_str[i-1] + my_str[i]
-    new_str = my_str[i-1:i+1]
-    new_list_1.append(new_str)
-
-print(new_list_1)
-
-
+# my_str = "qwertyhbvkcqxqttzqr"
+# my_list = []
+#
+# if len(my_str) % 2 != 0:
+#     my_str = my_str + "_"
+#
+# for i in range(1, len(my_str), 2):
+#     # new_str = my_str[i-1] + my_str[i]
+#     new_str = my_str[i-1:i+1]
+#     my_list.append(new_str)
+#
+# print(my_list)
 
 
 # 9. Дан список чисел. Определите, сколько в этом списке элементов,
 # которые больше суммы двух своих соседей (слева и справа), и НАПЕЧАТАЙТЕ КОЛИЧЕСТВО таких элементов.
 # Крайние элементы списка никогда не учитываются, поскольку у них недостаточно соседей.
 # Для списка [2,4,1,5,3,9,0,7] ответом будет 3 потому что 4 > 2+1, 5 > 1+3, 9>3+0.
+
+my_list = [2, 4, 1, 5, 3, 9, 0, 7]
+
+for i in range(1, len(my_list)):
+    sum_i = my_list[i+1] + my_list[i-1]
+    if sum_i > i:
+        print(i)
 
