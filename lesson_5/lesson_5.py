@@ -72,13 +72,13 @@
 #
 # # дана строка и пустой список, заполнить список символами из строки, которые стоят на четных местах в строке
 #
-# # my_str = "qwerty"
-# # my_list = []
-# # for index in range(len(my_str)):
-# # 	if not index % 2:
-# # 		symbol = my_str[index]
-# # 		my_list.append(symbol)
-# # print(my_list)         # №1
+# my_str = "qwerty"
+# my_list = []
+# for index in range(len(my_str)):
+# 	if not index % 2:
+# 		symbol = my_str[index]
+# 		my_list.append(symbol)
+# print(my_list)         # №1
 #
 # #
 # my_str = "qwerty"
@@ -154,7 +154,6 @@
 #
 # # extra task: написать последний код одной строкой
 # my_number = 876543201234056765
-# new_number = int(''.join(sorted(str(my_number))))
-# print(new_number)
+# print(int(''.join(sorted(str(my_number)))))
 
 
