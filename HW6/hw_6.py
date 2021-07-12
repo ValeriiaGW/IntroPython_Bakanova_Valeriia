@@ -18,7 +18,7 @@
 # print(new_list)
 
 
-# +++++++++++++++++++++++++++
+
 
 # 2. Дан список строк my_list. Создать новый список в который поместить
 # элементы из my_list у которых первый символ - буква "a".
@@ -30,7 +30,7 @@
 #     if index[0] == "a":
 #         new_list.append(index)
 # print(new_list)
-# +++++++++++++++++++++++++++++
+
 
 
 
@@ -38,11 +38,15 @@
 # 3. Дан список строк my_list. Создать новый список в который поместить
 # элементы из my_list в которых есть символ - буква "a" на любом месте.
 
-my_list = ["aerty", "dfagh", "dfghj", "wert", "erta"]
-new_list = []
+# my_list = ["aerty", "dfagh", "dfghj", "wert", "erta"]
+# new_list = []
+#
+# for index in my_list:
+#     if "a" in index:
+#         new_list.append(index)
+# print(new_list)
 
 
-# -----------------------------
 #
 # 4. Дан список my_list в котором могут быть как строки (type str) так и целые числа (type int).
 # Например [1, 2, 3, "11", "22", 33]
@@ -56,7 +60,7 @@ new_list = []
 #         new_list.append(index)
 # print(new_list)
 
-# +++++++++++++++++++++++++
+
 # 5. Дана строка my_str. Создать список в который поместить те символы из my_str,
 # которые встречаются в строке ТОЛЬКО ОДИН раз.
 #
@@ -65,7 +69,7 @@ new_list = []
 # my_list_uniq = list(set(my_str))
 # print(my_list_uniq)
 
-# ++++++++++++++++++++++++
+
 
 # 6. Даны две строки. Создать список в который поместить те символы,
 # которые есть в обеих строках хотя бы раз.
@@ -79,15 +83,31 @@ new_list = []
 # intersection_of_sets = list(my_set_1.intersection(my_set_2))
 # print(intersection_of_sets)
 #
-# # ++++++++++++++++++++++++++++++
+
 
 # 7. Даны две строки. Создать список в который поместить те символы, которые есть в обеих строках,
 # но в каждой ТОЛЬКО ПО ОДНОМУ разу.
 
 my_str_1 = "zqweewewqeqwweywerwqqqq"
 my_str_2 = "qzweefkllkewjblyvjqwwfjnvlewqq"
+my_list_1 = []
+my_list_2 = []
 
-# ____________________________
+for index in my_str_1:
+    count_index = my_str_1.count(index)
+    if count_index == 1:
+        my_list_1.append(index)
+for index in my_str_2:
+    count_index = my_str_2.count(index)
+    if count_index == 1:
+        my_list_2.append(index)
+
+my_set_1 = set(my_list_1)
+my_set_2 = set(my_list_2)
+
+intersection_of_sets = my_set_1.intersection(my_set_2)
+print(intersection_of_sets)
+
 
 
 #
@@ -112,7 +132,7 @@ my_str_2 = "qzweefkllkewjblyvjqwwfjnvlewqq"
 #                          "Улица": "Artekivska"},
 #           "Работа": {"Наличие": "+",
 #                      "Должность": "Manual QA"}}
-# print(person["Работа"])
+
 # #
 # # 9. Описать с помощью словаря следующую структуру (рецепт ненастоящего торта,
 # # придумать и указать граммы для продуктов):
@@ -144,4 +164,3 @@ my_str_2 = "qzweefkllkewjblyvjqwwfjnvlewqq"
 #                          "Глазурь": {"Какао": 40,
 #                                      "Сахар": 60,
 #                                      "Масло": 50}}}
-# print(cake["Составляющие"]["Коржи"])
