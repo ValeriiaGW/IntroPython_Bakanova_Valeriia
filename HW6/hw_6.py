@@ -110,9 +110,7 @@ my_set_2 = set(my_str_2)
 intersection_of_sets = list(my_set_1.intersection(my_set_2))
 
 for element in intersection_of_sets:
-    count_1 = my_str_1.count(element)
-    count_2 = my_str_2.count(element)
-    if count_1 == 1 and count_2 == 1:
+    if my_str_1.count(element) == 1 and my_str_2.count(element) == 1:
         my_list.append(element)
 print(my_list)
 
