@@ -58,16 +58,16 @@ my_list_a = list(keys_1.intersection(keys_2))
 my_list_b = list(keys_1.difference(keys_2))
 
 new_dict_c = {}
-for k, v in my_dict1.items():
-    if k in my_list_b:
-        new_dict_c[k] = v
+for key, value in my_dict1.items():
+    if key in my_list_b:
+        new_dict_c[key] = value
 
 new_dict_g = my_dict1.copy()
-for k, v in my_dict2.items():
-    if k in new_dict_g:
-        new_dict_g[k] = [new_dict_g[k], v]
+for key, value in my_dict2.items():
+    if key in new_dict_g:
+        new_dict_g[key] = [new_dict_g[key], value]
     else:
-        new_dict_g[k] = v
+        new_dict_g[key] = value
 
 
 
