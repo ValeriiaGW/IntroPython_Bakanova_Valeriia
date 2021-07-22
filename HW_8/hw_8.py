@@ -3,6 +3,39 @@
 # б) Напечатать самое длинное имя. Если длина имени совпадает - напечатать все имена.
 # в) Посчитать среднее количество лет всех людей из списка.
 #
+persons = [
+    {"name": "Jon", "age": 15},
+    {"name": "Mike", "age": 35},
+    {"name": "Anna", "age": 15},
+    {"name": "Samanta", "age": 75},
+    {"name": "Jack", "age": 45},
+]
+
+min_age = persons[0].get("age")
+long_name = len(persons[0].get("name"))
+sum_age = 0
+
+for person in persons:
+    age = person.get("age")
+    if age < min_age:
+        min_age = age
+for person in persons:
+    if min_age == person.get("age"):
+        print(person.get("name"))
+
+for person in persons:
+    if len(person.get("name")) > long_name:
+        long_name = len(person.get("name"))
+for person in persons:
+    if len(person.get("name")) == long_name:
+        print(person.get("name"))
+
+for person in persons:
+    sum_age += person.get("age")
+
+    avg_are = sum_age / len(persons)
+
+
 # 2) Даны два словаря my_dict_1 и my_dict_2.
 # а) Создать список из ключей, которые есть в обоих словарях.
 # б) Создать список из ключей, которые есть в первом, но нет во втором словаре.
@@ -14,71 +47,27 @@
 # {1:1, 2:2}, {11:11, 2:22} ---> {1:1, 11:11, 2:[2, 22]}
 
 
-persons = [
-    {"name": "Johon", "age": 15},
-    {"name": "Mike", "age": 35},
-    {"name": "Anna", "age": 15},
-    {"name": "Sara", "age": 75},
-    {"name": "Jack", "age": 45},
-]
+my_dict1 = {"key1": 1, "key2": 2, "key5": 5}
+my_dict2 = {"key1": 1, "key3": 3, "key4": 4}
+
+keys_1 = set(my_dict1.keys())
+keys_2 = set(my_dict2.keys())
+
+my_list_a = list(keys_1.intersection(keys_2))
+
+my_list_b = list(keys_1.difference(keys_2))
+
+new_dict_c = {}
+for k, v in my_dict1.items():
+    if k in my_list_b:
+        new_dict_c[k] = v
+
+new_dict_g = my_dict1.copy()
+for k, v in my_dict2.items():
+    if k in new_dict_g:
+        new_dict_g[k] = [new_dict_g[k], v]
+    else:
+        new_dict_g[k] = v
 
 
-
-
-min_age = persons[0].get("age")
-#
-for person in persons:
-    age = person.get("age")
-    if age < min_age:
-        min_age = age
-
-for person in persons:
-    if min_age == person.get('age'):
-        print(person.get('name'))
-
-#
-long_name = len(persons[0].get('name'))
-
-for person in persons:
-    if len(person.get("name")) > long_name:
-        long_name = len(person.get("name"))
-
-for person in persons:
-    if len(person.get("name")) == long_name:
-        print(person.get('name'))
-
-
-
-print('\n Task 1c')
-sum_age = 0
-
-for person in persons:
-    sum_age += person.get('age')
-
-print(sum_age / len(persons))
-#
-####################################
-
-# from functools import reduce
-#
-# total_age = 0
-# for person in persons:
-#     total_age += person.get("age")
-#
-# total_age = reduce(lambda x, p: x + p.get("age"), persons, 0)
-# print(total_age)
-####################################
-
-
-# my_dict1 = {1: 1, 2: 2}
-# my_dict2 = {2: 3, 3: 4}
-#
-# new_dict = my_dict1.copy()
-# for key, value in my_dict2.items():
-#     if key in new_dict:
-#         new_dict[key] = [new_dict[key], value]
-#     else:
-#         new_dict[key] = value
-#
-# print(new_dict)
 
