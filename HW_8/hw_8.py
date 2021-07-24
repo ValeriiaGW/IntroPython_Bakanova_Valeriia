@@ -3,6 +3,7 @@
 # б) Напечатать самое длинное имя. Если длина имени совпадает - напечатать все имена.
 # в) Посчитать среднее количество лет всех людей из списка.
 #
+
 persons = [
     {"name": "Jon", "age": 15},
     {"name": "Mike", "age": 35},
@@ -11,29 +12,32 @@ persons = [
     {"name": "Jack", "age": 45},
 ]
 
-min_age = persons[0].get("age")
-long_name = len(persons[0].get("name"))
-sum_age = 0
+age_list = []
+names_length = []
 
 for person in persons:
+
     age = person.get("age")
-    if age < min_age:
-        min_age = age
+    age_list.append(age)
+    long_name = len(person.get("name"))
+    names_length.append(long_name)
+
+min_age = min(age_list)
+
 for person in persons:
-    if min_age == person.get("age"):
+    if person.get("age") == min_age:
         print(person.get("name"))
 
+max_name_length = max(names_length)
+
 for person in persons:
-    if len(person.get("name")) > long_name:
-        long_name = len(person.get("name"))
-for person in persons:
-    if len(person.get("name")) == long_name:
+    if len(person.get("name")) == max_name_length:
         print(person.get("name"))
 
-for person in persons:
-    sum_age += person.get("age")
 
-    avg_are = sum_age / len(persons)
+avg_age = sum(age_list) / len(age_list)
+print(avg_age)
+
 
 
 # 2) Даны два словаря my_dict_1 и my_dict_2.
