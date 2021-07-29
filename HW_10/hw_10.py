@@ -1,4 +1,3 @@
-# import os
 import datetime
 import pprint
 
@@ -19,22 +18,14 @@ def get_domains_names(filename):
 filename = "domains.txt"
 new_list = get_domains_names(filename)
 domain_list = [element[1:-1] for element in new_list]
-# domain_list = []
-# for element in new_list:
-#     domain_list.append(element[1:-1])
-
-# ll = [{'key': element[1:-1]} for element in new_list]
-# ll2 = {index: element[1:-1] for index, element in enumerate(new_list)}
-#
-# print(ll2)
 print(domain_list)
 
-# #
+
 # 2. Написать функцию, которая получает в виде параметра имя файла (names.txt)
 # и возвращает список всех фамилий из него.
 # Каждая строка файла содержит номер, фамилию, страну, некоторое число (таблица взята с википедии).
 # Разделитель - символ табуляции "\t"
-#
+
 filename_2 = "names.txt"
 names = []
 
