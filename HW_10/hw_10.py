@@ -91,6 +91,4 @@ def process_data(data: list) -> list:
     return split_list
 
 
-date_dict = process_data(read_file(filename_3))
-pprint.pprint(date_dict)
-
+print(process_data(read_file(filename_3)))
