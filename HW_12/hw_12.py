@@ -11,43 +11,12 @@ import json
 # 4. Написать функцию сортировки по количеству слов в поле "text"
 
 
-filename = "data.json"
-
-
 def read_data(filename):
     with open(filename) as json_file:
         data = json.load(json_file)
-
     return data
 
-#
-# # print(read_data("data.json"))
-#
-# def get_names(data):
-#     # names = data.get("name").split(" ")
-#     # return [name[-1] for name in names]
-#
-#     full_names = [dictionary.get("name") for dictionary in data]
-#     name = [name[-1] for name in [name.split() for name in full_names]]
-#     return name
-#
-#
-# print(sorted(read_data("data.json"), key=get_names))
 
-
-# def sort_name(data):
-#     sorted_list = sorted(read_data("data.json"), key=get_names)
-#     return sorted_list
-# #
-# #
-# print(sort_name(get_names(read_data("data.json"))))
-
-
-
-# def sort_by_text_len(data):
-#     return len(data['text'])
-#
-#
 def get_name(data):
     name = data.get('name').split(' ')
     if len(name) == 1:
@@ -56,8 +25,18 @@ def get_name(data):
         return name[-1]
 
 
+def get_text_len(data):
+    text_len = len(data.get('text'))
+    return text_len
+
+
 def sort_by_name(data):
     return sorted(data, key=get_name)
-# print(sorted(data, key=sort_by_text_len))
+
+
+def sort_by_len(data):
+    return sorted(data, key=get_text_len)
+
 
 print(sort_by_name(read_data("data.json")))
+print(sort_by_len(read_data("data.json")))
