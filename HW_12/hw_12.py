@@ -16,7 +16,9 @@ filename = "data.json"
 
 def read_data(filename):
     with open(filename) as json_file:
-        data = json_file.
+        json.load(json_file)
+
+
     return data
 
 print(read_data("data.json"))
