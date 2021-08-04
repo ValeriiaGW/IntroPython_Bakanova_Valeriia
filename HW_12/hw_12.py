@@ -1,5 +1,5 @@
 import json
-
+import re
 
 # data.json - файл с данными о некоторых математиках прошлого.
 # 1. Необходимо написать функцию, которая считает эти данные из файла. Параметр функции - имя файла.
@@ -26,8 +26,7 @@ def get_name(data):
 
 
 def get_text_len(data):
-    text_len = len(data.get('text'))
-    return text_len
+    return len(data.get('text'))
 
 
 def sort_by_name(data):
@@ -38,5 +37,19 @@ def sort_by_len(data):
     return sorted(data, key=get_text_len)
 
 
+def get_year(data):
+    years = re.findall(r'\d+', data.get("years"))
+    found_year = [int(year) for year in years]
+    if "BC" in data.get("years"):
+        return -1 * min(found_year)
+    else:
+        return max(found_year)
+
+
+def sort_by_year(data):
+    return sorted(data, key=get_year)
+
+
 print(sort_by_name(read_data("data.json")))
 print(sort_by_len(read_data("data.json")))
+print(sort_by_year(sort_by_year(read_data('data.json'))))
