@@ -1,15 +1,15 @@
 import requests
 import random
-
+#
 # url = "https://api.forismatic.com/api/1.0/"
 # response = requests.get(url)
 # print(response.status_code)
 # print(response.text)
-
-
-
-
-
+#
+#
+#
+#
+#
 # url = "https://api.forismatic.com/api/1.0/"
 # params = {"method": "getQuote",
 #           "format": "json",
@@ -17,8 +17,8 @@ import random
 # response = requests.get(url, params=params)
 # print(response.status_code)
 # print(response.text)
-
-
+#
+#
 # def get_quote(lang="ru"):
 #     url = "https://api.forismatic.com/api/1.0/"
 #     params = {"method": "getQuote",
@@ -29,10 +29,10 @@ import random
 #
 # res = get_quote()
 # print(res)
-
-
-
-
+#
+#
+#
+#
 # def get_raw_quote(lang="ru"):
 #     url = "https://api.forismatic.com/api/1.0/"
 #     params = {"method": "getQuote",
@@ -76,14 +76,14 @@ def get_quote(raw_quote):
     return raw_quote['quoteText']
 
 
-def get_qauthor(raw_quote):
-    return raw_quote['quoteAuthor']
+# def get_qauthor(raw_quote):
+#     return raw_quote['quoteAuthor']
 
 
-for request_number in range(100):
+for request_number in range(10):
     raw_quote = get_raw_quote()
-    quote = get_quote(raw_quote)
+    # quote = get_quote(raw_quote)
     print(raw_quote)
 
-res = get_raw_quote()
-print(res)
+# res = get_raw_quote()
+# print(res)
