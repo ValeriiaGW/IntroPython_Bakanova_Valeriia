@@ -65,13 +65,4 @@ def write_dict_to_csv(filename, data):
 
 
 write_dict_to_csv(filename, data)
-# def read_dict_from_csv(filename):
-#     with open(filename, 'r') as csv_file:
-#         reader = csv.DictReader(csv_file, delimiter=",")
-#         data = []
-#         for row in reader:
-#             data.append(row)
-#     return data
-#
-#
-# print(read_dict_from_csv("file.csv"))
+
