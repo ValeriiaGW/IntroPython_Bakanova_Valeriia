@@ -18,9 +18,7 @@ def get_raw_quote(lang="ru"):
     params = {"method": "getQuote",
               "format": "json",
               "lang": lang,
-              "key": random.randint(1, 999999),
-              "qutoteAuthor": True
-    }
+              "key": random.randint(1, 999999)}
     response = requests.get(url, params=params)
     return response.json()
 
