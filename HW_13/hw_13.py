@@ -18,26 +18,29 @@ def get_raw_quote(lang="ru"):
     params = {"method": "getQuote",
               "format": "json",
               "lang": lang,
-              "key": random.randint(1, 999999)}
+              "key": random.randint(1, 999999),
+              "qutoteAuthor": True
+    }
     response = requests.get(url, params=params)
-
     return response.json()
 
 
 def amount_of_quotes(amount):
     quotes = []
-    for request_number in range(amount):
+    count = 0
+
+    while count < amount:
         quote = get_raw_quote()
-        if "quoteAuthor" in quote and quote["quoteAuthor"]:
+
+        if "quoteAuthor" in quote and quote.get("quoteAuthor"):
             quotes.append(quote)
+            count += 1
+
     return quotes
 
 
-print(amount_of_quotes(10))
-
-
 filename = "file.csv"
-data = amount_of_quotes(10)
+data = amount_of_quotes(15)
 
 
 def write_dict_to_csv(filename, data):
